@@ -1,8 +1,19 @@
-count = input("Enter random count: ")
-count_2 = input("Enter second random count: ")
+name = input("Hi, what's your name? ")
+print("Hello "+ name)
 
-if int(count) == int(count_2):
-    print("Your second count was equals first count")
+question = input("You wanna equal your counts? ")
+if question == 'Yes':
+    print("Nice!")
 else:
-    print("Your second count wasn't equals frist count")
-#in_progress
+    print("Sad :(")
+    
+count = int(input("Enter first count: "))
+count_2 = int(input("Enter second count: "))
+if count == count_2:
+    print("Your first count was equal second count")
+elif count > count_2:
+    print("Your first count was bigger than second count")
+elif count < count_2:
+    print("Your second count was bigger than first count")    
+else:
+    print("Invalid value")
