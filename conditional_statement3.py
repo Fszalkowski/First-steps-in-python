@@ -4,9 +4,13 @@ print("Hello "+ name)
 question = input("You wanna equal your counts? ")
 if question == 'Yes':
     print("Nice!")
+elif question == 'No':
+    print("That was so sad :(")    
+    exit()
 else:
-    print("Sad :(")
-    
+    print("Invalid value")
+    exit()
+
 count = int(input("Enter first count: "))
 count_2 = int(input("Enter second count: "))
 if count == count_2:
