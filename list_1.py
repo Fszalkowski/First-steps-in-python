@@ -30,7 +30,32 @@ elif question_2 == "no":
     exit()
 else:
     print("Invalid value")
-    exit()    
-numbers = [count_1, count_2, count_3, count_4, count_5]    
-question_3 = ("What do you want to do with your counts?")
-#in progress
+    exit()  
+numbers = [count_1, count_2, count_3, count_4, count_5]
+while True:
+    question_3 = input("What do you want to do with your counts?(add/remove/clear/exit): ")
+    if question_3 == "add":
+        try:
+            value = int(input("Enter count which you wanna add: "))
+            numbers.append(value)
+            print(numbers)
+        except ValueError:
+            print("Invalid value, please try one more.")
+    elif question_3 == "remove":
+        try:
+            value_2 = int(input("Which count you wanna remove? "))
+            if value_2 in numbers:
+                numbers.remove(value_2)
+                print(numbers)
+            else: 
+                print("Count not found on the list, enter count one more time.")    
+        except ValueError:
+            print("Invalid value, please try one more.")
+    elif question_3 == "clear":
+            numbers.clear()
+            print(numbers)
+    elif question_3 == "exit":
+        print("Exiting...")
+        break        
+    else:
+        print("Invalid option. Please choose add/remove/clear")
