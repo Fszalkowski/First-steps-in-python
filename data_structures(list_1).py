@@ -3,13 +3,18 @@ while True:
         fruit_1 = input("Enter first fruit: ")
         fruit_2 = input("Enter second fruit: ")
         fruit_3 = input("Enter third fruit: ")
-    
+        
         fruits = [fruit_1, fruit_2, fruit_3]
-        if "banana" in fruits:
-            for n, fruit in enumerate(fruits):
-                if fruit == "banana":
-                    print(f"Banana was very sweet!")
-                    
+        for fruit in fruits:
+            if fruit == "banana":
+                print("banana is very sweet")
+            elif fruit == "lemon":
+                print("lemon is so sour!")
+            elif fruit == "cherry":
+                print("cherry is not good...")
+            else:
+                print(f"{fruit} it was delicius")
+                
         exit_button = input("You wanna exit?(yes/no)")
         if exit_button == "yes":
             break
@@ -17,8 +22,7 @@ while True:
             continue
         else:
             print("Invalid value")
-            break
+            continue
     except ValueError:
         print("Invalid value")
         continue
-    #in_progress
